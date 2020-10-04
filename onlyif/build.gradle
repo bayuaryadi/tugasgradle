@@ -1,0 +1,18 @@
+task extractmetadata{
+    doLast {println 'extract metadata'}
+}
+
+extractmetadata.onlyif {
+    System.properties['extract.metadata'] == 'true'
+}
+
+task extractdata {
+    doLast{println'extrac data'}
+}
+
+task extractdatabase 
+
+extractdatabase {
+    doLast{println 'zipping data'}
+}
+  
